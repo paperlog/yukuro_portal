@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>yukurou96 | Personal Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-neutral-950 text-neutral-100 min-h-screen flex flex-col font-sans relative overflow-x-hidden selection:bg-cyan-500 selection:text-neutral-950">
+
+  <!-- 背景のドットグリッド & 環境光（Glow Effect） -->
+  <div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0"></div>
+  <div class="fixed top-20 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none z-0"></div>
+  <div class="fixed bottom-20 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none z-0"></div>
+
+  <!-- ==================== Header ==================== -->
+  <header class="sticky top-0 z-50 w-full backdrop-blur-md bg-neutral-950/80 border-b border-neutral-800/80 transition">
+    <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2.5 group">
+        <span class="w-8 h-8 rounded-xl bg-neutral-800 border border-neutral-700/80 flex items-center justify-center overflow-hidden group-hover:border-cyan-500/80 transition duration-300">
+          <img src="img/icon.webp" alt="yukurou96" class="w-full h-full object-cover">
+        </span>
+        <span class="font-semibold text-sm tracking-tight text-neutral-200 group-hover:text-cyan-400 transition">
+          yukurou96
+        </span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ==================== Main Bento Grid ==================== -->
+  <main class="relative z-10 flex-grow w-full max-w-5xl mx-auto px-4 py-8 md:py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[minmax(160px,auto)]">
+
+      <!-- 1. Hero (PC: 2列×2行 / タブレット: 1列×2行) -->
+      <section id="hero" class="lg:col-span-2 lg:row-span-2 md:row-span-2 rounded-3xl bg-neutral-900/70 backdrop-blur-sm border border-neutral-800/90 hover:border-cyan-500/50 hover:-translate-y-0.5 transition duration-300 overflow-hidden flex flex-col md:flex-row group shadow-xl shadow-black/40">
+        
+        <!-- 左側：テキストエリア -->
+        <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium bg-cyan-950/50 text-cyan-400 rounded-full border border-cyan-800/50">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+                Personal Portal
+              </span>
+            </div>
+            
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-none">
+              Yukuro
+            </h1>
+            <p class="text-xs text-neutral-500 mt-2 font-mono">U96 / ゆくろう</p>
+
+            <p class="text-neutral-400 mt-5 text-sm leading-relaxed">
+              毎日パソコンに向かいつつ、「なるようになれ」と思いながら気ままに過ごしています。課題を出されて解決することや、Webサイトの構成をああだこうだと試行錯誤しながら形にするのが好きです。
+            </p>
+          </div>
+
+          <!-- 下部ステータス -->
+          <div class="mt-8 flex items-center gap-3 pt-4 border-t border-neutral-800/80">
+            <div class="w-8 h-8 rounded-full bg-neutral-800/80 border border-neutral-700/60 flex items-center justify-center text-xs flex-shrink-0 text-cyan-400">💻</div>
+            <p class="text-xs text-neutral-400 truncate">現在地：課題解決とサイト構築中</p>
+          </div>
+        </div>
+
+        <!-- 右側：縦長イラスト（画面幅に応じて自然に表示） -->
+        <div class="relative w-full md:w-48 lg:w-56 h-64 md:h-auto flex-shrink-0 overflow-hidden bg-neutral-950 border-t md:border-t-0 md:border-l border-neutral-800/80">
+          <img src="img/hero-art.webp" alt="Yukuro artwork" class="w-full h-full object-cover object-[center_35%] opacity-90 group-hover:scale-105 transition duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-neutral-900/95 md:from-neutral-900 via-transparent to-transparent pointer-events-none"></div>
+        </div>
+
+      </section>
+
+      <!-- 6. Links (中画面・大画面ともにHeroの横に配置) -->
+      <section id="links" class="rounded-3xl p-6 bg-neutral-900/70 backdrop-blur-sm border border-neutral-800/90 hover:border-neutral-700 hover:-translate-y-0.5 transition duration-300 flex flex-col justify-between shadow-xl shadow-black/40">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xs font-semibold uppercase tracking-wider text-neutral-400 flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-sm bg-neutral-500"></span>
+            Links
+          </h2>
+          <span class="text-[11px] text-neutral-500">SNS & Accounts</span>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3 my-4">
+          <a href="https://x.com/yukurou96" target="_blank" rel="noopener noreferrer" class="py-3 px-4 rounded-2xl bg-neutral-800/60 hover:bg-neutral-800 flex flex-col items-center justify-center gap-1.5 text-xs font-semibold border border-neutral-700/40 hover:border-neutral-500 hover:text-cyan-400 transition group">
+            <span class="text-base font-bold text-neutral-200 group-hover:text-white transition">X</span>
+            <span class="text-[10px] text-neutral-400 group-hover:text-neutral-300 font-mono">@yukurou96</span>
+          </a>
+          <a href="https://t.co/mIf8ahyOjx" target="_blank" rel="noopener noreferrer" class="py-3 px-4 rounded-2xl bg-neutral-800/60 hover:bg-neutral-800 flex flex-col items-center justify-center gap-1.5 text-xs font-semibold border border-neutral-700/40 hover:border-neutral-500 hover:text-pink-400 transition group">
+            <span class="text-base text-neutral-200 group-hover:text-white transition">Tiktok</span>
+            <span class="text-[10px] text-neutral-400 group-hover:text-neutral-300 font-mono">@yukurou96</span>
+          </a>
+        </div>
+
+        <div class="text-[11px] text-neutral-500 text-right">別タブで開く ↗</div>
+      </section>
+
+      <!-- 5. Thoughts / Note -->
+      <section class="relative rounded-3xl p-6 bg-neutral-900/70 backdrop-blur-sm border border-neutral-800/90 hover:border-neutral-700 hover:-translate-y-0.5 transition duration-300 flex flex-col justify-between overflow-hidden shadow-xl shadow-black/40">
+        <!-- 巨大なクォートマークの透かし -->
+        <span class="absolute -top-4 -right-1 text-7xl font-serif text-neutral-800/40 select-none pointer-events-none">“</span>
+        
+        <h2 class="text-xs font-semibold uppercase tracking-wider text-neutral-400 flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-sm bg-neutral-500"></span>
+          Motto / Note
+        </h2>
+
+        <div class="my-auto py-2 z-10">
+          <p class="text-lg text-neutral-100 font-medium italic tracking-wide">
+            トライアンドエラー
+          </p>
+        </div>
+
+        <span class="text-[11px] text-neutral-500 text-right z-10">試行錯誤の連続</span>
+      </section>
+
+      <!-- 2. Bio & Now (PC: 2列×1行) -->
+      <section id="bio" class="md:col-span-2 lg:col-span-2 rounded-3xl p-6 bg-neutral-900/70 backdrop-blur-sm border border-neutral-800/90 hover:border-neutral-700 hover:-translate-y-0.5 transition duration-300 flex flex-col justify-between shadow-xl shadow-black/40">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xs font-semibold uppercase tracking-wider text-neutral-400 flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-sm bg-indigo-500"></span>
+            Bio / Profile
+          </h2>
+          <span class="text-xs font-mono text-neutral-500">2026</span>
+        </div>
+        <p class="text-sm text-neutral-300 mt-3 leading-relaxed">
+          プログラミングとネットワーク関係を勉強中。普段は推しの配信を眺めたり、「小説家になろう」で物語を読んだり、ぐっすり眠る時間が至福です。
+        </p>
+      </section>
+
+      <!-- 4. Creations / Archives (PC: 3列×1〜2行) -->
+      <section id="creations" class="md:col-span-2 lg:col-span-3 rounded-3xl p-6 bg-neutral-900/70 backdrop-blur-sm border border-neutral-800/90 hover:border-neutral-700 hover:-translate-y-0.5 transition duration-300 flex flex-col justify-between shadow-xl shadow-black/40">
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="text-xs font-semibold uppercase tracking-wider text-neutral-400 flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-sm bg-emerald-500"></span>
+            Creations & Archives
+          </h2>
+          <span class="text-[11px] px-2 py-0.5 rounded bg-neutral-800 text-neutral-400 border border-neutral-700/60 font-mono">Under Construction</span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="p-4 rounded-2xl bg-neutral-950/40 border border-dashed border-neutral-800 hover:border-neutral-700 transition flex items-center gap-3">
+            <span class="text-xl">📁</span>
+            <div>
+              <span class="text-[10px] text-neutral-500 font-medium uppercase font-mono">Projects</span>
+              <div class="font-medium text-xs sm:text-sm text-neutral-300">制作物・コード置き場を準備中…</div>
+            </div>
+          </div>
+          <div class="p-4 rounded-2xl bg-neutral-950/40 border border-dashed border-neutral-800 hover:border-neutral-700 transition flex items-center gap-3">
+            <span class="text-xl">📝</span>
+            <div>
+              <span class="text-[10px] text-neutral-500 font-medium uppercase font-mono">Notes</span>
+              <div class="font-medium text-xs sm:text-sm text-neutral-300">学んだこと・活動ログを順次追加予定</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Interests & Activities (PC: 1列×1行〜) -->
+      <section id="interests" class="rounded-3xl p-6 bg-neutral-900/70 backdrop-blur-sm border border-neutral-800/90 hover:border-neutral-700 hover:-translate-y-0.5 transition duration-300 flex flex-col justify-between shadow-xl shadow-black/40">
+        <h2 class="text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-3 flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-sm bg-amber-500"></span>
+          Interests
+        </h2>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="px-2.5 py-1 text-xs bg-neutral-800/90 hover:bg-neutral-800 border border-neutral-700/50 hover:border-neutral-600 text-neutral-300 rounded-xl transition cursor-default">🎲 ボードゲーム</span>
+          <span class="px-2.5 py-1 text-xs bg-neutral-800/90 hover:bg-neutral-800 border border-neutral-700/50 hover:border-neutral-600 text-neutral-300 rounded-xl transition cursor-default">📜 TRPG</span>
+          <span class="px-2.5 py-1 text-xs bg-neutral-800/90 hover:bg-neutral-800 border border-neutral-700/50 hover:border-neutral-600 text-neutral-300 rounded-xl transition cursor-default">⌨️ プログラミング</span>
+          <span class="px-2.5 py-1 text-xs bg-neutral-800/90 hover:bg-neutral-800 border border-neutral-700/50 hover:border-neutral-600 text-neutral-300 rounded-xl transition cursor-default">🀄 麻雀</span>
+          <span class="px-2.5 py-1 text-xs bg-neutral-800/90 hover:bg-neutral-800 border border-neutral-700/50 hover:border-neutral-600 text-neutral-300 rounded-xl transition cursor-default">🎯 ダーツ</span>
+          <span class="px-2.5 py-1 text-xs bg-neutral-800/90 hover:bg-neutral-800 border border-neutral-700/50 hover:border-neutral-600 text-neutral-300 rounded-xl transition cursor-default">🍜 食べること</span>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ==================== Footer ==================== -->
+  <footer class="relative z-10 w-full border-t border-neutral-800/80 py-8 text-neutral-500 text-xs mt-auto">
+    <div class="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span>© 2026 yukurou96.</span>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="#hero" class="hover:text-neutral-300 transition flex items-center gap-1 group">
+          <span>Back to Top</span>
+          <span class="group-hover:-translate-y-0.5 transition">↑</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
